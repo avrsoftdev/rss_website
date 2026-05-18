@@ -41,8 +41,8 @@ const slides = [
   },
   {
     tag: "05 — Mobility",
-    title: "EV Infrastructure",
-    sub: "AC & DC charging deployments — from rooftop to highway corridors.",
+    title: "Energy Management System",
+    sub: "Real-time energy analytics, intelligent load optimization, consumption monitoring.",
     image: slideEv,
     stat: "180+ charge points",
   },

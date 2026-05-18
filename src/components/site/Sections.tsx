@@ -86,7 +86,7 @@ const solutions = [
   { icon: Activity, title: "SCADA Systems", desc: "Distributed real-time supervisory control with secure architectures.", tag: "24×7" },
   { icon: Cog, title: "Industrial Automation", desc: "PLC, HMI and robotics for the modern smart factory.", tag: "300+" },
   { icon: Wifi, title: "IoT Monitoring", desc: "Edge-to-cloud telemetry, AI anomaly detection, predictive maintenance.", tag: "1.2M/day" },
-  { icon: BatteryCharging, title: "EV Infrastructure", desc: "AC & DC charging — rooftop, fleet, highway corridors.", tag: "180+" },
+  { icon: BatteryCharging, title: "Energy Management System", desc: "Real-time energy analytics, intelligent load optimization, consumption monitoring.", tag: "180+" },
   { icon: Gauge, title: "Smart Energy Monitoring", desc: "Net-metering, zero-export devices, energy optimisation.", tag: "Live" },
 ];
 
