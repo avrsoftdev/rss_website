@@ -3,12 +3,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
-import slideSolar from "@/assets/slide-solar.jpg";
-import slideAutomation from "@/assets/slide-automation.jpg";
-import slideScada from "@/assets/slide-scada.jpg";
-import slideIot from "@/assets/slide-iot.jpg";
-import slideEv from "@/assets/slide-ev.jpg";
-import slidePanels from "@/assets/slide-panels.jpg";
+import slideSolar from "@/assets/solar_epc_gw.png";
+import slideAutomation from "@/assets/industrial_auto_gw.png";
+import slideScada from "@/assets/scada_gw.png";
+import slideIot from "@/assets/iot_gw.png";
+import slideEv from "@/assets/energy_management_gw.png";
+import slidePanels from "@/assets/electrical_panels_gw.png";
 
 const slides = [
   {

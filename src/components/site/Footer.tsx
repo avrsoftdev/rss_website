@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { Zap, Mail, Phone, MapPin, Linkedin, Twitter, Youtube, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube, ArrowRight } from "lucide-react";
+import rssLogo from "@/assets/rss-logo.png";
 
 export function Footer() {
   return (
@@ -13,9 +14,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">
-              <span className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-bright)] shadow-[var(--shadow-glow)]">
-                <Zap className="h-5 w-5" strokeWidth={2.5} />
-              </span>
+              <img src={rssLogo} alt="RSS India" className="h-14 w-auto" />
               <div>
                 <div className="font-display text-lg font-bold">RSS India</div>
                 <div className="text-[10px] uppercase tracking-[0.2em] text-[var(--brand-glow)]">

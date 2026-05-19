@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
-import { Menu, X, Zap } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import rssLogo from "@/assets/rss-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -35,9 +36,11 @@ export function Nav() {
           }`}
         >
           <Link to="/" className="flex items-center gap-2.5 group">
-            <span className="grid h-9 w-9 place-items-center rounded-xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-bright)] text-white shadow-[var(--shadow-glow)] transition-transform group-hover:scale-105">
-              <Zap className="h-5 w-5" strokeWidth={2.5} />
-            </span>
+            <img
+              src={rssLogo}
+              alt="RSS India"
+              className="h-12 w-auto transition-transform group-hover:scale-105"
+            />
             <div className="leading-tight">
               <div className="font-display text-base font-bold tracking-tight">RSS India</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-[var(--brand-dark)]/70">
