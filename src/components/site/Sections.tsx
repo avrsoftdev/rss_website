@@ -176,7 +176,7 @@ export function IndustriesSection() {
           title={<>Powering every <span className="text-gradient">vertical</span></>}
           sub="From large-format manufacturing to distributed smart infrastructure — we engineer for scale."
         />
-        <div className="mt-14 grid gap-4 md:grid-cols-3 lg:grid-cols-6">
+        <div className="mt-14 grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
           {industries.map((i, k) => (
             <motion.div
               key={i.title}
