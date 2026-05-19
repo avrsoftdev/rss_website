@@ -30,11 +30,7 @@ export function Nav() {
       }`}
     >
       <div className="mx-auto max-w-7xl px-4">
-        <div
-          className={`flex items-center justify-between rounded-full px-4 py-2.5 transition-all ${
-            scrolled ? "glass shadow-[0_8px_30px_-12px_rgba(0,107,60,0.18)]" : "bg-transparent"
-          }`}
-        >
+        <div className="flex items-center justify-between rounded-full glass px-4 py-2.5 shadow-[0_8px_30px_-12px_rgba(0,107,60,0.18)] transition-all">
           <Link to="/" className="flex items-center gap-2.5 group">
             <img
               src={rssLogo}
