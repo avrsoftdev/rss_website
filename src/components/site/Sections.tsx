@@ -28,13 +28,13 @@ function Counter({ to, suffix = "", duration = 1.6 }: { to: number; suffix?: str
 }
 
 const stats = [
-  { v: 500, suf: "+", l: "Installations" },
-  { v: 25, suf: "+", l: "Cities" },
-  { v: 10, suf: "+", l: "Years Experience" },
-  { v: 98, suf: "%", l: "Client Satisfaction" },
+  { v: 5000, suf: "+", l: "Installations" },
+  { v: 25, suf: "+", l: "States" },
+  { v: 16, suf: "+", l: "Years of Cumulative Experience" },
+  { v: 99, suf: "%", l: "Client Satisfaction" },
 ];
 
-const logos = ["TATA", "RELIANCE", "ADANI", "L&T", "SIEMENS", "ABB", "JSW", "MAHINDRA", "GODREJ", "INFOSYS"];
+const logos = ["Flipkart", "NHPC", "Airport Authority of India", "BHEL", "IISERV", "ABB", "APPCL", "Hydro Green", "Clean Tech"];
 
 export function TrustedStrip() {
   return (
@@ -297,11 +297,11 @@ const projects = [
     color: "from-[#0a3d28] to-[#06b25e]",
   },
   {
-    title: "5MW Rooftop Solar EPC",
+    title: "7MW Rooftop Solar EPC",
     metric: "₹3.2Cr",
     metricLabel: "Annual Savings",
-    timeline: "45 Days",
-    tech: "Solar · Net-meter",
+    timeline: "3 Days",
+    tech: "Zero Export with Monitoring",
     color: "from-[#054224] to-[#00a651]",
   },
   {

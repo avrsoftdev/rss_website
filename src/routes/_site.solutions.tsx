@@ -38,7 +38,7 @@ function SolutionsPage() {
             Engineered systems, <span className="text-gradient">end to end</span>
           </>
         }
-        sub="From a single electrical panel to a multi-MW solar plant under SCADA - RSS India delivers integrated, monitored, and certified systems."
+        sub="From a single electrical panel to a multi-MW solar plant under SCADA - RSS India deliver integrated, monitored, and certified systems."
       />
       <section className="pb-28">
         <div className="mx-auto max-w-7xl px-6">

@@ -20,7 +20,7 @@ function AboutPage() {
       <PageHero
         eyebrow="About RSS India"
         title={<>Engineering the <span className="text-gradient">smart energy era</span></>}
-        sub="Founded by power and automation engineers, RSS India delivers integrated systems for India's most ambitious industrial operators."
+        sub="Founded by power and automation engineers, RSS India deliver integrated systems for India's most ambitious industrial operators."
       />
       <TechnologySection />
       <WhyChooseUs />
