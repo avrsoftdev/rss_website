@@ -1,6 +1,29 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, Phone, MapPin, Linkedin, Twitter, Youtube, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Youtube, ArrowRight, Facebook, Instagram } from "lucide-react";
 import rssLogo from "@/assets/rss-logo.png";
+
+const socialLinks = [
+  {
+    label: "Facebook",
+    href: "https://www.facebook.com/people/Reliable-Source-and-Solutions-India-Pvt-Ltd/100064289521236/",
+    icon: Facebook,
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/rssindia_/",
+    icon: Instagram,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/company/reliable-source-and-solutions-india-llp/",
+    icon: Linkedin,
+  },
+  {
+    label: "YouTube",
+    href: "https://www.youtube.com/channel/UC_kUgJ4in7tRTmvxCmoI_6Q",
+    icon: Youtube,
+  },
+];
 
 export function Footer() {
   return (
@@ -67,13 +90,20 @@ export function Footer() {
           <div className="md:col-span-3">
             <h4 className="font-display text-sm font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-white/65">
-              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[var(--brand-glow)]" /> Plot 47, Industrial Area, Pune, MH 411019</li>
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--brand-glow)]" /> +91 98XXX 12345</li>
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--brand-glow)]" /> hello@rssindia.tech</li>
+              <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[var(--brand-glow)]" /> 279/4, Khera Chauganpur, Ecotech-3rd, Phase-1, Greater Noida, India - 201306</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--brand-glow)]" /> (+91) 8800132874</li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--brand-glow)]" /> info@rss-india.com</li>
             </ul>
             <div className="mt-5 flex gap-2">
-              {[Linkedin, Twitter, Youtube].map((Icon, i) => (
-                <a key={i} href="#" className="grid h-9 w-9 place-items-center rounded-full border border-white/10 hover:bg-white/10">
+              {socialLinks.map(({ label, href, icon: Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={label}
+                  className="grid h-9 w-9 place-items-center rounded-full border border-white/10 hover:bg-white/10"
+                >
                   <Icon className="h-4 w-4" />
                 </a>
               ))}
