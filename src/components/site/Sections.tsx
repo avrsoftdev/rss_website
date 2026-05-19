@@ -82,12 +82,12 @@ export function TrustedStrip() {
 
 /* ---------- Solutions Showcase ---------- */
 const solutions = [
-  { icon: Sun, title: "Solar EPC", desc: "Utility-scale design, engineering, procurement, commissioning.", tag: "120MW+" },
-  { icon: Activity, title: "SCADA Systems", desc: "Distributed real-time supervisory control with secure architectures.", tag: "24×7" },
-  { icon: Cog, title: "Industrial Automation", desc: "PLC, HMI and robotics for the modern smart factory.", tag: "300+" },
-  { icon: Wifi, title: "IoT Monitoring", desc: "Edge-to-cloud telemetry, AI anomaly detection, predictive maintenance.", tag: "1.2M/day" },
-  { icon: BatteryCharging, title: "Energy Management System", desc: "Real-time energy analytics, intelligent load optimization, consumption monitoring.", tag: "180+" },
-  { icon: Gauge, title: "Smart Energy Monitoring", desc: "Net-metering, zero-export devices, energy optimisation.", tag: "Live" },
+  { icon: Sun, title: "Solar EPC", desc: "Utility-scale design, engineering, procurement, commissioning.", tag: "120MW+", slug: "solar-epc-solutions" },
+  { icon: Activity, title: "SCADA Systems", desc: "Distributed real-time supervisory control with secure architectures.", tag: "24×7", slug: "scada-systems" },
+  { icon: Cog, title: "Industrial Automation", desc: "PLC, HMI and robotics for the modern smart factory.", tag: "300+", slug: "industrial-automation" },
+  { icon: Wifi, title: "IoT Monitoring", desc: "Edge-to-cloud telemetry, AI anomaly detection, predictive maintenance.", tag: "1.2M/day", slug: "iot-monitoring" },
+  { icon: BatteryCharging, title: "Energy Management System", desc: "Real-time energy analytics, intelligent load optimization, consumption monitoring.", tag: "180+", slug: "smart-energy-solutions" },
+  { icon: Gauge, title: "Smart Energy Monitoring", desc: "Net-metering, zero-export devices, energy optimisation.", tag: "Live", slug: "zero-export-devices" },
 ];
 
 export function SolutionsShowcase() {
@@ -113,6 +113,12 @@ export function SolutionsShowcase() {
               transition={{ duration: 0.6, delay: i * 0.06 }}
               className="group relative overflow-hidden rounded-3xl border border-border bg-card p-7 transition-all hover:-translate-y-1 hover:border-[var(--brand)]/40 hover:shadow-[0_30px_60px_-30px_rgba(0,166,81,0.45)]"
             >
+              <Link
+                to="/solutions/$slug"
+                params={{ slug: s.slug }}
+                className="absolute inset-0 z-10"
+                aria-label={`View ${s.title}`}
+              />
               <div
                 className="pointer-events-none absolute -right-20 -top-20 h-56 w-56 rounded-full opacity-0 transition-opacity duration-500 group-hover:opacity-100"
                 style={{ background: "var(--gradient-glow)" }}
@@ -128,12 +134,11 @@ export function SolutionsShowcase() {
                 </div>
                 <h3 className="mt-6 font-display text-xl font-bold">{s.title}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
-                <Link
-                  to="/solutions"
+                <span
                   className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--brand-dark)] transition-all group-hover:gap-3"
                 >
                   Learn more <ArrowRight className="h-4 w-4" />
-                </Link>
+                </span>
               </div>
             </motion.div>
           ))}

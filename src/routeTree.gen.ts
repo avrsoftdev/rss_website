@@ -16,6 +16,7 @@ import { Route as SiteProjectsRouteImport } from './routes/_site.projects'
 import { Route as SiteIndustriesRouteImport } from './routes/_site.industries'
 import { Route as SiteContactRouteImport } from './routes/_site.contact'
 import { Route as SiteAboutRouteImport } from './routes/_site.about'
+import { Route as SiteSolutionsSlugRouteImport } from './routes/_site.solutions.$slug'
 
 const SiteRoute = SiteRouteImport.update({
   id: '/_site',
@@ -51,6 +52,11 @@ const SiteAboutRoute = SiteAboutRouteImport.update({
   path: '/about',
   getParentRoute: () => SiteRoute,
 } as any)
+const SiteSolutionsSlugRoute = SiteSolutionsSlugRouteImport.update({
+  id: '/$slug',
+  path: '/$slug',
+  getParentRoute: () => SiteSolutionsRoute,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof SiteIndexRoute
@@ -58,15 +64,17 @@ export interface FileRoutesByFullPath {
   '/contact': typeof SiteContactRoute
   '/industries': typeof SiteIndustriesRoute
   '/projects': typeof SiteProjectsRoute
-  '/solutions': typeof SiteSolutionsRoute
+  '/solutions': typeof SiteSolutionsRouteWithChildren
+  '/solutions/$slug': typeof SiteSolutionsSlugRoute
 }
 export interface FileRoutesByTo {
   '/about': typeof SiteAboutRoute
   '/contact': typeof SiteContactRoute
   '/industries': typeof SiteIndustriesRoute
   '/projects': typeof SiteProjectsRoute
-  '/solutions': typeof SiteSolutionsRoute
+  '/solutions': typeof SiteSolutionsRouteWithChildren
   '/': typeof SiteIndexRoute
+  '/solutions/$slug': typeof SiteSolutionsSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -75,8 +83,9 @@ export interface FileRoutesById {
   '/_site/contact': typeof SiteContactRoute
   '/_site/industries': typeof SiteIndustriesRoute
   '/_site/projects': typeof SiteProjectsRoute
-  '/_site/solutions': typeof SiteSolutionsRoute
+  '/_site/solutions': typeof SiteSolutionsRouteWithChildren
   '/_site/': typeof SiteIndexRoute
+  '/_site/solutions/$slug': typeof SiteSolutionsSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -87,8 +96,16 @@ export interface FileRouteTypes {
     | '/industries'
     | '/projects'
     | '/solutions'
+    | '/solutions/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/about' | '/contact' | '/industries' | '/projects' | '/solutions' | '/'
+  to:
+    | '/about'
+    | '/contact'
+    | '/industries'
+    | '/projects'
+    | '/solutions'
+    | '/'
+    | '/solutions/$slug'
   id:
     | '__root__'
     | '/_site'
@@ -98,6 +115,7 @@ export interface FileRouteTypes {
     | '/_site/projects'
     | '/_site/solutions'
     | '/_site/'
+    | '/_site/solutions/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -155,15 +173,34 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SiteAboutRouteImport
       parentRoute: typeof SiteRoute
     }
+    '/_site/solutions/$slug': {
+      id: '/_site/solutions/$slug'
+      path: '/$slug'
+      fullPath: '/solutions/$slug'
+      preLoaderRoute: typeof SiteSolutionsSlugRouteImport
+      parentRoute: typeof SiteSolutionsRoute
+    }
   }
 }
+
+interface SiteSolutionsRouteChildren {
+  SiteSolutionsSlugRoute: typeof SiteSolutionsSlugRoute
+}
+
+const SiteSolutionsRouteChildren: SiteSolutionsRouteChildren = {
+  SiteSolutionsSlugRoute: SiteSolutionsSlugRoute,
+}
+
+const SiteSolutionsRouteWithChildren = SiteSolutionsRoute._addFileChildren(
+  SiteSolutionsRouteChildren,
+)
 
 interface SiteRouteChildren {
   SiteAboutRoute: typeof SiteAboutRoute
   SiteContactRoute: typeof SiteContactRoute
   SiteIndustriesRoute: typeof SiteIndustriesRoute
   SiteProjectsRoute: typeof SiteProjectsRoute
-  SiteSolutionsRoute: typeof SiteSolutionsRoute
+  SiteSolutionsRoute: typeof SiteSolutionsRouteWithChildren
   SiteIndexRoute: typeof SiteIndexRoute
 }
 
@@ -172,7 +209,7 @@ const SiteRouteChildren: SiteRouteChildren = {
   SiteContactRoute: SiteContactRoute,
   SiteIndustriesRoute: SiteIndustriesRoute,
   SiteProjectsRoute: SiteProjectsRoute,
-  SiteSolutionsRoute: SiteSolutionsRoute,
+  SiteSolutionsRoute: SiteSolutionsRouteWithChildren,
   SiteIndexRoute: SiteIndexRoute,
 }
 
