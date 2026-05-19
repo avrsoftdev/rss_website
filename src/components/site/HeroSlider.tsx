@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
+import slideDgSync from "@/assets/dg_sync.png";
 import slideSolar from "@/assets/solar_epc_gw.png";
 import slideAutomation from "@/assets/industrial_auto_gw.png";
 import slideScada from "@/assets/scada_gw.png";
@@ -12,42 +13,49 @@ import slidePanels from "@/assets/electrical_panels_gw.png";
 
 const slides = [
   {
-    tag: "01 — Solar EPC",
+    tag: "01 - DG PV Sync",
+    title: "DG PV Synchronization",
+    sub: "Seamless synchronization between solar PV, DG sets and utility power for optimized energy utilization.",
+    image: slideDgSync,
+    stat: "PV + DG + utility sync",
+  },
+  {
+    tag: "02 - Solar EPC",
     title: "Solar EPC Solutions",
     sub: "End-to-end design, engineering, procurement and commissioning of utility-scale solar plants.",
     image: slideSolar,
     stat: "120 MW+ commissioned",
   },
   {
-    tag: "02 — Automation",
+    tag: "03 - Automation",
     title: "Industrial Automation",
     sub: "PLC, HMI, robotics and process control systems engineered for the smart factory.",
     image: slideAutomation,
     stat: "300+ automation lines",
   },
   {
-    tag: "03 — SCADA",
+    tag: "04 - SCADA",
     title: "SCADA Systems",
     sub: "Real-time supervisory control with secure, scalable architectures across distributed assets.",
     image: slideScada,
     stat: "24×7 remote operations",
   },
   {
-    tag: "04 — IoT",
+    tag: "05 - IoT",
     title: "IoT Monitoring",
     sub: "Edge-to-cloud telemetry with anomaly detection, alerts and predictive maintenance.",
     image: slideIot,
     stat: "1.2M data points / day",
   },
   {
-    tag: "05 — Mobility",
+    tag: "06 - Mobility",
     title: "Energy Management System",
     sub: "Real-time energy analytics, intelligent load optimization, consumption monitoring.",
     image: slideEv,
     stat: "180+ charge points",
   },
   {
-    tag: "06 — Panels",
+    tag: "07 - Panels",
     title: "Electrical Panels",
     sub: "LT/MV panels, ATS, capacitor banks and zero-export devices, in-house engineered.",
     image: slidePanels,
