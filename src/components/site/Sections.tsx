@@ -3,9 +3,18 @@ import { motion, useInView } from "framer-motion";
 import {
   Sun, Cpu, Activity, Wifi, BatteryCharging, Cog, Gauge, Workflow, ShieldCheck,
   Building2, Warehouse, Factory, Zap, Network, Radio, Cloud, Brain, Layers,
-  Headphones, Rocket, Wrench, ArrowRight, Star, Quote, MapPin
+  Headphones, Rocket, Wrench, ArrowRight, Star, Quote, MapPin,
+  Trees,
+  HeartPulse,
+  GraduationCap
 } from "lucide-react";
 import { Link } from "@tanstack/react-router";
+import skWarehouse from "@/assets/sk_warehouse.png";
+import skPlantsManu from "@/assets/sk_plants_manu.png";
+import skCommercial from "@/assets/sk_commercial.png";
+import skPlywood from "@/assets/sk_plywood.png";
+import skHospital from "@/assets/sk_hospital.png";
+import skEducational from "@/assets/sk_educational.png";
 
 /* ---------- Trusted strip ---------- */
 function Counter({ to, suffix = "", duration = 1.6 }: { to: number; suffix?: string; duration?: number }) {
@@ -150,12 +159,12 @@ export function SolutionsShowcase() {
 
 /* ---------- Industries ---------- */
 const industries = [
-  { icon: Factory, title: "Manufacturing" },
-  { icon: Warehouse, title: "Warehouses" },
-  { icon: Building2, title: "Commercial" },
-  { icon: Sun, title: "Solar Plants" },
-  { icon: Network, title: "Smart Infrastructure" },
-  { icon: Zap, title: "Energy Sector" },
+  { icon: Warehouse, title: "Warehouses and Logistic", image: skWarehouse },
+  { icon: Factory, title: "Manufacturing and Industrial Plants", image: skPlantsManu },
+  { icon: Building2, title: "Commercial Buildings", image: skCommercial },
+  { icon: Trees, title: "Plywood and Timber Industries", image: skPlywood },
+  { icon: HeartPulse, title: "Hospitals and Healthcare", image: skHospital },
+  { icon: GraduationCap, title: "Educational Institutions", image: skEducational },
 ];
 
 export function IndustriesSection() {
@@ -175,15 +184,19 @@ export function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: k * 0.05 }}
-              className="group relative aspect-square rounded-3xl glass p-5 transition-all hover:scale-[1.04] hover:shadow-[var(--shadow-glow)]"
+              className="group relative aspect-square rounded-3xl overflow-hidden transition-all hover:scale-[1.04] hover:shadow-[var(--shadow-glow)]"
+              style={{ backgroundImage: `url(${i.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
-              <div className="flex h-full flex-col justify-between">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white text-[var(--brand-dark)] shadow-[var(--shadow-soft)] ring-1 ring-[var(--brand)]/15 transition-colors group-hover:bg-gradient-to-br group-hover:from-[var(--brand)] group-hover:to-[var(--brand-bright)] group-hover:text-white">
-                  <i.icon className="h-5 w-5" strokeWidth={2} />
-                </span>
-                <div>
-                  <div className="font-display text-base font-semibold leading-tight">{i.title}</div>
-                  <div className="mt-1 text-[10px] uppercase tracking-[0.16em] text-muted-foreground">Vertical</div>
+              <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
+              <div className="relative h-full p-5">
+                <div className="flex h-full flex-col justify-between">
+                  <span className="grid h-12 w-12 place-items-center rounded-2xl bg-white/90 text-[var(--brand-dark)] shadow-[var(--shadow-soft)] ring-1 ring-[var(--brand)]/15 transition-colors group-hover:bg-gradient-to-br group-hover:from-[var(--brand)] group-hover:to-[var(--brand-bright)] group-hover:text-white">
+                    <i.icon className="h-5 w-5" strokeWidth={2} />
+                  </span>
+                  <div>
+                    <div className="font-display text-base font-semibold leading-tight text-white drop-shadow-sm">{i.title}</div>
+                    <div className="mt-1 text-[10px] uppercase tracking-[0.16em] text-white/80">Vertical</div>
+                  </div>
                 </div>
               </div>
             </motion.div>
