@@ -25,6 +25,8 @@ const socialLinks = [
   },
 ];
 
+const clientPortalUrl = "https://www.rss-iiot.in/solar/authentication/sign-in";
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#04130a] text-white/85">
@@ -84,6 +86,7 @@ export function Footer() {
               <li><Link to="/projects" className="hover:text-[var(--brand-glow)]">Projects</Link></li>
               <li><Link to="/industries" className="hover:text-[var(--brand-glow)]">Industries</Link></li>
               <li><Link to="/contact" className="hover:text-[var(--brand-glow)]">Contact</Link></li>
+              <li><a href={clientPortalUrl} target="_blank" rel="noreferrer" className="hover:text-[var(--brand-glow)]">Client Portal</a></li>
             </ul>
           </div>
 

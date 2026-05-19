@@ -12,6 +12,8 @@ const links = [
   { to: "/contact", label: "Contact" },
 ] as const;
 
+const clientPortalUrl = "https://www.rss-iiot.in/solar/authentication/sign-in";
+
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -59,7 +61,15 @@ export function Nav() {
             ))}
           </nav>
 
-          <div className="hidden md:block">
+          <div className="hidden items-center gap-2 md:flex">
+            <a
+              href={clientPortalUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center rounded-full border border-[var(--brand)]/20 bg-white/45 px-4 py-2.5 text-xs font-semibold text-[var(--brand-dark)] transition hover:bg-[var(--surface-tinted)]"
+            >
+              Client Portal
+            </a>
             <Link to="/contact" className="btn-primary !py-2.5 !px-5 text-xs">
               Get a Quote
             </Link>
@@ -87,6 +97,15 @@ export function Nav() {
                   {l.label}
                 </Link>
               ))}
+              <a
+                href={clientPortalUrl}
+                target="_blank"
+                rel="noreferrer"
+                onClick={() => setOpen(false)}
+                className="rounded-2xl px-4 py-3 text-sm font-medium hover:bg-[var(--surface-tinted)]"
+              >
+                Client Portal
+              </a>
               <Link to="/contact" onClick={() => setOpen(false)} className="btn-primary mt-2">
                 Get a Quote
               </Link>
