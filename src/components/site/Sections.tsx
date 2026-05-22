@@ -92,6 +92,7 @@ export function TrustedStrip() {
 /* ---------- Solutions Showcase ---------- */
 const solutions = [
   { icon: Sun, title: "Solar EPC", desc: "Utility-scale design, engineering, procurement, commissioning.", tag: "120MW+", slug: "solar-epc-solutions" },
+  { icon: BatteryCharging, title: "Solar BOS", desc: "Combiner boxes, disconnects, wiring, inverter and battery connection panels.", tag: "BOS", slug: "solar-bos-balance-of-system" },
   { icon: Activity, title: "SCADA Systems", desc: "Distributed real-time supervisory control with secure architectures.", tag: "24×7", slug: "scada-systems" },
   { icon: Cog, title: "Industrial Automation", desc: "PLC, HMI and robotics for the modern smart factory.", tag: "300+", slug: "industrial-automation" },
   { icon: Wifi, title: "IoT Monitoring", desc: "Edge-to-cloud telemetry, AI anomaly detection, predictive maintenance.", tag: "1.2M/day", slug: "iot-monitoring" },
@@ -184,7 +185,7 @@ export function IndustriesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: k * 0.05 }}
-              className="group relative aspect-square rounded-3xl overflow-hidden transition-all hover:scale-[1.04] hover:shadow-[var(--shadow-glow)]"
+              className="group relative aspect-square overflow-hidden rounded-3xl transition-all hover:scale-[1.04] hover:shadow-[var(--shadow-glow)]"
               style={{ backgroundImage: `url(${i.image})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
             >
               <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/60" />
@@ -526,6 +527,8 @@ const posts = [
   { tag: "SCADA", title: "Hardening OT networks: a practical playbook", read: "10 min" },
 ];
 
+const brochureDownloadUrl = "https://drive.google.com/uc?export=download&id=1rTAHcmQ4d3QbFrpHAgkxzg7QNf6La0pe";
+
 export function Insights() {
   return (
     <section className="relative bg-[var(--surface-tinted)] py-28">
@@ -599,7 +602,9 @@ export function FinalCTA() {
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Link to="/contact" className="btn-primary">Get Consultation <ArrowRight className="h-4 w-4" /></Link>
           <a
-            href="#"
+            href={brochureDownloadUrl}
+            target="_blank"
+            rel="noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-white/30 bg-white/10 px-6 py-3 text-sm font-semibold text-white backdrop-blur transition hover:bg-white/20"
           >
             Download Brochure

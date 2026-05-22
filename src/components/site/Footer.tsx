@@ -27,6 +27,25 @@ const socialLinks = [
 
 const clientPortalUrl = "https://www.rss-iiot.in/solar/authentication/sign-in";
 
+const footerSolutions = [
+  { label: "Solar EPC", slug: "solar-epc-solutions" },
+  {
+    label: "Solar BOS(Balance of System)",
+    slug: "solar-bos-balance-of-system",
+    products: [
+      "Combiner/Recombiner Boxes",
+      "Disconnects Boxes",
+      "Wire Solutions",
+      "Solar Inverter Solutions",
+      "Battery Connection Panels",
+    ],
+  },
+  { label: "Automation", slug: "industrial-automation" },
+  { label: "SCADA", slug: "scada-systems" },
+  { label: "IoT", slug: "iot-monitoring" },
+  { label: "DG Sync", slug: "dg-synchronization" },
+];
+
 export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-[#04130a] text-white/85">
@@ -41,9 +60,9 @@ export function Footer() {
             <div className="flex items-center gap-3">
               <img src={rssLogo} alt="RSS India" className="h-14 w-auto" />
               <div>
-                <div className="font-display text-lg font-bold">RSS India</div>
+                <div className="font-display text-lg font-bold">Reliable Source and Solutions</div>
                 <div className="text-[10px] uppercase tracking-[0.2em] text-[var(--brand-glow)]">
-                  Engineering Smart Energy
+                  Commited to Reliablity
                 </div>
               </div>
             </div>
@@ -69,11 +88,22 @@ export function Footer() {
           <div className="md:col-span-2">
             <h4 className="font-display text-sm font-semibold text-white">Solutions</h4>
             <ul className="mt-4 space-y-2 text-sm text-white/60">
-              {["Solar EPC", "Automation", "SCADA", "IoT", "EV Infra", "DG Sync"].map((s) => (
-                <li key={s}>
-                  <Link to="/solutions" className="hover:text-[var(--brand-glow)]">
-                    {s}
+              {footerSolutions.map((solution) => (
+                <li key={solution.label}>
+                  <Link
+                    to="/solutions/$slug"
+                    params={{ slug: solution.slug }}
+                    className="hover:text-[var(--brand-glow)]"
+                  >
+                    {solution.label}
                   </Link>
+                  {solution.products ? (
+                    <ul className="mt-1 space-y-1 pl-3 text-xs text-white/45">
+                      {solution.products.map((product) => (
+                        <li key={product}>{product}</li>
+                      ))}
+                    </ul>
+                  ) : null}
                 </li>
               ))}
             </ul>

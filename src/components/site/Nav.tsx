@@ -36,13 +36,13 @@ export function Nav() {
           <Link to="/" className="flex items-center gap-2.5 group">
             <img
               src={rssLogo}
-              alt="RSS India"
+              alt="Reliable Source and Solutions"
               className="h-12 w-auto transition-transform group-hover:scale-105"
             />
             <div className="leading-tight">
-              <div className="font-display text-base font-bold tracking-tight">RSS India</div>
+              <div className="font-display text-base font-bold tracking-tight">Reliable Source and Solutions</div>
               <div className="text-[10px] uppercase tracking-[0.18em] text-[var(--brand-dark)]/70">
-                Smart Energy · Automation
+                Commited to Reliability
               </div>
             </div>
           </Link>
