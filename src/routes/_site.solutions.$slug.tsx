@@ -78,6 +78,34 @@ function SolutionDetailPage() {
                 </div>
               ))}
             </div>
+
+            {"images" in solution && solution.images.length > 0 && (
+              <div className="mt-10">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-dark)]">
+                  Industrial automation panels
+                </div>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {solution.images.map((image) => (
+                    <figure
+                      key={image.title}
+                      className="group overflow-hidden rounded-2xl border border-border bg-white"
+                    >
+                      <div className="aspect-[4/3] overflow-hidden bg-[var(--surface-tinted)]">
+                        <img
+                          src={image.src}
+                          alt={image.alt}
+                          className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+                          loading="lazy"
+                        />
+                      </div>
+                      <figcaption className="px-4 py-3 font-display text-sm font-bold">
+                        {image.title}
+                      </figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
 
           <aside className="h-fit rounded-3xl border border-border bg-[var(--surface-tinted)] p-7">

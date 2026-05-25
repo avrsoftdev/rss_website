@@ -9,6 +9,13 @@ import {
   Sun,
   Wifi,
 } from "lucide-react";
+import apfcPanel from "@/assets/apfc_ia.jpg";
+import controlDeskPanel from "@/assets/control_desk_ia.jpg";
+import ltPanel from "@/assets/lt_panel_ia.jpg";
+import mccPanel from "@/assets/mcc_ia.jpg";
+import pccPanel from "@/assets/pcc_ia.jpg";
+import plcPanel from "@/assets/plc_ia.jpg";
+import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
 
 export const solutions = [
   {
@@ -63,6 +70,15 @@ export const solutions = [
       "APFC Panels",
       "Variable Frequency Drive Panels",
       "LT Panels",
+    ],
+    images: [
+      { src: plcPanel, alt: "PLC panel", title: "PLC Panel" },
+      { src: controlDeskPanel, alt: "Control desk panel", title: "Control Desk Panel" },
+      { src: mccPanel, alt: "MCC panel", title: "MCC Panel" },
+      { src: pccPanel, alt: "PCC panel", title: "PCC Panel" },
+      { src: apfcPanel, alt: "APFC panel", title: "APFC Panel" },
+      { src: variableFrequencyPanel, alt: "Variable frequency drive panel", title: "Variable Frequency Drive Panel" },
+      { src: ltPanel, alt: "LT panel", title: "LT Panel" },
     ],
     outcomes: ["Higher throughput", "Reduced manual errors", "Better process visibility"],
   },
