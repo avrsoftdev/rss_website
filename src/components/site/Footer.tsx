@@ -116,7 +116,7 @@ export function Footer() {
               <li><Link to="/projects" className="hover:text-[var(--brand-glow)]">Projects</Link></li>
               <li><Link to="/industries" className="hover:text-[var(--brand-glow)]">Industries</Link></li>
               <li><Link to="/contact" className="hover:text-[var(--brand-glow)]">Contact</Link></li>
-              <li><a href={clientPortalUrl} target="_blank" rel="noreferrer" className="hover:text-[var(--brand-glow)]">Client Portal</a></li>
+              <li><a href={clientPortalUrl} target="_blank" rel="noreferrer" className="hover:text-[var(--brand-glow)]">Online Monitoring</a></li>
             </ul>
           </div>
 
