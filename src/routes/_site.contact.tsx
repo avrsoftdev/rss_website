@@ -31,7 +31,7 @@ function ContactPage() {
               <h3 className="font-display text-xl font-bold">Reach the team</h3>
               <ul className="mt-6 space-y-5 text-sm">
                 <li className="flex items-start gap-3"><MapPin className="mt-0.5 h-5 w-5 text-[var(--brand)]" /><div><div className="font-semibold">Headquarters</div><div className="text-muted-foreground">279/4, Khera Chauganpur, Ecotech-3rd, Phase-1, Greater Noida, India - 201306</div></div></li>
-                <li className="flex items-start gap-3"><Phone className="mt-0.5 h-5 w-5 text-[var(--brand)]" /><div><div className="font-semibold">Phone</div><div className="text-muted-foreground">(+91) 8800132874</div></div></li>
+                <li className="flex items-start gap-3"><Phone className="mt-0.5 h-5 w-5 text-[var(--brand)]" /><div><div className="font-semibold">Phone</div><div className="text-muted-foreground">(+91) 9953698441, (+91) 8800132874</div></div></li>
                 <li className="flex items-start gap-3"><Mail className="mt-0.5 h-5 w-5 text-[var(--brand)]" /><div><div className="font-semibold">Email</div><div className="text-muted-foreground">info@rss-india.com</div></div></li>
               </ul>
               <div className="mt-8 grid grid-cols-3 gap-3 border-t border-border pt-6">

@@ -210,16 +210,16 @@ export function IndustriesSection() {
 
 /* ---------- India Map ---------- */
 const markers = [
-  { x: 30, y: 38, name: "Pune" },
-  { x: 22, y: 50, name: "Mumbai" },
-  { x: 46, y: 22, name: "Delhi" },
-  { x: 58, y: 55, name: "Hyderabad" },
-  { x: 50, y: 70, name: "Bengaluru" },
-  { x: 70, y: 38, name: "Kolkata" },
-  { x: 38, y: 78, name: "Chennai" },
-  { x: 14, y: 32, name: "Ahmedabad" },
-  { x: 60, y: 30, name: "Lucknow" },
-  { x: 35, y: 60, name: "Goa" },
+  { x: 30, y: 38, name: "Delhi NCR" },
+  { x: 22, y: 50, name: "Uttar Pradesh" },
+  { x: 46, y: 22, name: "Rajasthan" },
+  { x: 58, y: 55, name: "Haryana" },
+  { x: 50, y: 70, name: "Telangana" },
+  { x: 70, y: 38, name: "Odisha" },
+  { x: 38, y: 78, name: "Assam" },
+  { x: 14, y: 32, name: "Bihar" },
+  { x: 60, y: 30, name: "Punjab" },
+  { x: 35, y: 60, name: "Madhya Pradesh" },
 ];
 
 export function IndiaMap() {
