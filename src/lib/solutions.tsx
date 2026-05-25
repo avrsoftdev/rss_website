@@ -11,12 +11,16 @@ import {
 } from "lucide-react";
 import apfcPanel from "@/assets/apfc_ia.jpg";
 import batteryPanelBos from "@/assets/battery_panel_bos.jpg";
+import bosGpt from "@/assets/bos_gpt.jpeg";
 import controlDeskPanel from "@/assets/control_desk_ia.jpg";
+import dgGpt from "@/assets/dg_gpt.jpeg";
 import disconnectBoxesBos from "@/assets/disconnect_boxes_bos.jpg";
+import ltGpt from "@/assets/lt_gpt.jpeg";
 import ltPanel from "@/assets/lt_panel_ia.jpg";
 import mccPanel from "@/assets/mcc_ia.jpg";
 import pccPanel from "@/assets/pcc_ia.jpg";
 import plcPanel from "@/assets/plc_ia.jpg";
+import scadaGpt from "@/assets/scada_gpt.jpeg";
 import scadaReal from "@/assets/scada_real.jpg";
 import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
 import zeroExpertDgPv from "@/assets/zero_expert_dgpv.png";
@@ -58,6 +62,7 @@ export const solutions = [
     images: [
       { src: disconnectBoxesBos, alt: "Solar disconnect boxes", title: "Disconnect Boxes" },
       { src: batteryPanelBos, alt: "Solar battery connection panel", title: "Battery Connection Panel" },
+      { src: bosGpt, alt: "Solar BOS system", title: "Solar BOS" },
     ],
     outcomes: ["Safer plant wiring", "Reliable system protection", "Cleaner inverter integration"],
   },
@@ -87,6 +92,7 @@ export const solutions = [
       { src: apfcPanel, alt: "APFC panel", title: "APFC Panel" },
       { src: variableFrequencyPanel, alt: "Variable frequency drive panel", title: "Variable Frequency Drive Panel" },
       { src: ltPanel, alt: "LT panel", title: "LT Panel" },
+      { src: ltGpt, alt: "Industrial LT panel", title: "LT Panel GPT" },
     ],
     outcomes: ["Higher throughput", "Reduced manual errors", "Better process visibility"],
   },
@@ -108,6 +114,11 @@ export const solutions = [
         src: scadaReal,
         alt: "SCADA monitoring interface and control system",
         title: "SCADA Control System",
+      },
+      {
+        src: scadaGpt,
+        alt: "SCADA system monitoring",
+        title: "SCADA System",
       },
     ],
     outcomes: ["Live operational visibility", "Faster fault response", "Audit-ready reporting"],
@@ -203,6 +214,11 @@ export const solutions = [
         src: zeroExpertDgPv,
         alt: "DG synchronization zero export and DG-PV control panel",
         title: "Zero Export DG-PV Panel",
+      },
+      {
+        src: dgGpt,
+        alt: "DG synchronization panel",
+        title: "DG Synchronization",
       },
     ],
     outcomes: ["Stable backup power", "Optimized generator loading", "Reduced operator intervention"],
