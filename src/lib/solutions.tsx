@@ -10,12 +10,16 @@ import {
   Wifi,
 } from "lucide-react";
 import apfcPanel from "@/assets/apfc_ia.jpg";
+import batteryPanelBos from "@/assets/battery_panel_bos.jpg";
 import controlDeskPanel from "@/assets/control_desk_ia.jpg";
+import disconnectBoxesBos from "@/assets/disconnect_boxes_bos.jpg";
 import ltPanel from "@/assets/lt_panel_ia.jpg";
 import mccPanel from "@/assets/mcc_ia.jpg";
 import pccPanel from "@/assets/pcc_ia.jpg";
 import plcPanel from "@/assets/plc_ia.jpg";
+import scadaReal from "@/assets/scada_real.jpg";
 import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
+import zeroExpertDgPv from "@/assets/zero_expert_dgpv.png";
 
 export const solutions = [
   {
@@ -50,6 +54,10 @@ export const solutions = [
       "Wire Solutions",
       "Solar Inverter Solutions",
       "Battery Connection Panels",
+    ],
+    images: [
+      { src: disconnectBoxesBos, alt: "Solar disconnect boxes", title: "Disconnect Boxes" },
+      { src: batteryPanelBos, alt: "Solar battery connection panel", title: "Battery Connection Panel" },
     ],
     outcomes: ["Safer plant wiring", "Reliable system protection", "Cleaner inverter integration"],
   },
@@ -94,6 +102,13 @@ export const solutions = [
     highlights: [
       "String Monitoring Solution",
       "Local Remote SCADA with Weather Monitoring Solution",
+    ],
+    images: [
+      {
+        src: scadaReal,
+        alt: "SCADA monitoring interface and control system",
+        title: "SCADA Control System",
+      },
     ],
     outcomes: ["Live operational visibility", "Faster fault response", "Audit-ready reporting"],
   },
@@ -182,6 +197,13 @@ export const solutions = [
       "Load sharing, load management, AMF logic, and grid paralleling",
       "Controller programming, breaker control, protection, and metering",
       "Commissioning, testing, operator training, and service support",
+    ],
+    images: [
+      {
+        src: zeroExpertDgPv,
+        alt: "DG synchronization zero export and DG-PV control panel",
+        title: "Zero Export DG-PV Panel",
+      },
     ],
     outcomes: ["Stable backup power", "Optimized generator loading", "Reduced operator intervention"],
   },

@@ -50,6 +50,8 @@ function SolutionDetailPage() {
     );
   }
 
+  const hasSingleImage = "images" in solution && solution.images.length === 1;
+
   return (
     <>
       <PageHero eyebrow="Solution" title={solution.title} sub={solution.intro} />
@@ -82,15 +84,15 @@ function SolutionDetailPage() {
             {"images" in solution && solution.images.length > 0 && (
               <div className="mt-10">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-dark)]">
-                  Industrial automation panels
+                  Solution gallery
                 </div>
-                <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                <div className={`mt-5 grid gap-4 ${hasSingleImage ? "grid-cols-1" : "sm:grid-cols-2 xl:grid-cols-3"}`}>
                   {solution.images.map((image) => (
                     <figure
                       key={image.title}
-                      className="group overflow-hidden rounded-2xl border border-border bg-white"
+                      className={`group overflow-hidden rounded-2xl border border-border bg-white ${hasSingleImage ? "mx-auto w-full max-w-4xl" : ""}`}
                     >
-                      <div className="aspect-[4/3] overflow-hidden bg-[var(--surface-tinted)]">
+                      <div className={`overflow-hidden bg-[var(--surface-tinted)] ${hasSingleImage ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
                         <img
                           src={image.src}
                           alt={image.alt}
