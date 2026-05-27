@@ -23,6 +23,10 @@ import plcPanel from "@/assets/plc_ia.jpg";
 import scadaGpt from "@/assets/scada_gpt.jpeg";
 import scadaReal from "@/assets/scada_real.jpg";
 import rssIot from "@/assets/rss-iot.jpeg";
+import rssIot1 from "@/assets/rss-iot1.jpeg";
+import rssIot2 from "@/assets/rss-iot2.jpeg";
+import rssIot3 from "@/assets/rss-iot3.jpeg";
+import rssIot4 from "@/assets/rss-iot4.jpeg";
 import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
 import zeroExpertDgPv from "@/assets/zero_expert_dgpv.png";
 
@@ -145,6 +149,26 @@ export const solutions = [
         alt: "IoT Monitoring Dashboard and Analytics",
         title: "IoT Monitoring System",
       },
+      {
+        src: rssIot1,
+        alt: "IoT monitoring device and interface",
+        title: "IoT Monitoring Unit",
+      },
+      {
+        src: rssIot2,
+        alt: "IoT monitoring dashboard",
+        title: "Cloud Analytics",
+      },
+      {
+        src: rssIot3,
+        alt: "IoT gateway and sensors",
+        title: "Edge Gateway",
+      },
+      {
+        src: rssIot4,
+        alt: "IoT real-time data monitoring",
+        title: "Real-time Telemetry",
+      },
     ],
     outcomes: ["Remote insight", "Less unplanned downtime", "Data-led maintenance"],
   },
@@ -234,8 +258,8 @@ export const solutions = [
   {
     slug: "zero-export-devices",
     icon: ShieldCheck,
-    title: "Zero Export Devices",
-    shortTitle: "Zero Export Devices",
+    title: "Zero Export Device",
+    shortTitle: "Zero Export Device",
     desc: "Compliant zero-export controllers for net-metering and utility policy requirements.",
     tag: "ZE",
     intro:
