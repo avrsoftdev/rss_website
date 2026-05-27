@@ -124,7 +124,7 @@ export function Footer() {
             <h4 className="font-display text-sm font-semibold text-white">Contact</h4>
             <ul className="mt-4 space-y-3 text-sm text-white/65">
               <li className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 text-[var(--brand-glow)]" /> 279/4, Khera Chauganpur, Ecotech-3rd, Phase-1, Greater Noida, India - 201306</li>
-              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--brand-glow)]" /> (+91) 8800132874</li>
+              <li className="flex items-center gap-2"><Phone className="h-4 w-4 text-[var(--brand-glow)]" />(+91) 9953698441, (+91) 8800132874</li>
               <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[var(--brand-glow)]" /> info@rss-india.com</li>
             </ul>
             <div className="mt-5 flex gap-2">

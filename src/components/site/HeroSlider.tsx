@@ -7,7 +7,7 @@ import slideDgSync from "@/assets/dg_sync.png";
 import slideSolar from "@/assets/solar_epc_gw.png";
 import slideAutomation from "@/assets/industrial_auto_gw.png";
 import slideScada from "@/assets/scada_gw.png";
-import slideIot from "@/assets/iot_gw.png";
+import slideIot from "@/assets/rss-iot.jpeg";
 import slideEv from "@/assets/energy_management_gw.png";
 import slidePanels from "@/assets/electrical_panels_gw.png";
 

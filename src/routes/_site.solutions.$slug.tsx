@@ -58,6 +58,26 @@ function SolutionDetailPage() {
       <section className="pb-28">
         <div className="mx-auto grid max-w-7xl gap-8 px-6 lg:grid-cols-[1fr_360px]">
           <div className="rounded-3xl border border-border bg-card p-7 md:p-10">
+            {hasSingleImage && (
+              <div className="mb-10">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-dark)]">
+                  Solution Preview
+                </div>
+                <figure className="group mt-5 overflow-hidden rounded-2xl border border-border bg-white shadow-[var(--shadow-soft)]">
+                  <div className="overflow-hidden bg-[var(--surface-tinted)] aspect-[16/9]">
+                    <img
+                      src={solution.images[0].src}
+                      alt={solution.images[0].alt}
+                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
+                    />
+                  </div>
+                  <figcaption className="px-5 py-4 font-display text-base font-bold text-[var(--brand-dark)]">
+                    {solution.images[0].title}
+                  </figcaption>
+                </figure>
+              </div>
+            )}
+
             <div className="flex items-center gap-4">
               <span className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-[var(--brand)] to-[var(--brand-bright)] text-white shadow-[var(--shadow-soft)]">
                 <solution.icon className="h-6 w-6" />
@@ -81,18 +101,18 @@ function SolutionDetailPage() {
               ))}
             </div>
 
-            {"images" in solution && solution.images.length > 0 && (
+            {"images" in solution && solution.images.length > 0 && !hasSingleImage && (
               <div className="mt-10">
                 <div className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--brand-dark)]">
                   Solution gallery
                 </div>
-                <div className={`mt-5 grid gap-4 ${hasSingleImage ? "grid-cols-1" : "sm:grid-cols-2 xl:grid-cols-3"}`}>
+                <div className="mt-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                   {solution.images.map((image) => (
                     <figure
                       key={image.title}
-                      className={`group overflow-hidden rounded-2xl border border-border bg-white ${hasSingleImage ? "mx-auto w-full max-w-4xl" : ""}`}
+                      className="group overflow-hidden rounded-2xl border border-border bg-white"
                     >
-                      <div className={`overflow-hidden bg-[var(--surface-tinted)] ${hasSingleImage ? "aspect-[16/10]" : "aspect-[4/3]"}`}>
+                      <div className="aspect-[4/3] overflow-hidden bg-[var(--surface-tinted)]">
                         <img
                           src={image.src}
                           alt={image.alt}

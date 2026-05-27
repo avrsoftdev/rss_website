@@ -232,12 +232,12 @@ export function IndiaMap() {
               align="left"
               eyebrow="National Footprint"
               title={<>Deployed across <span className="text-gradient">India</span></>}
-              sub="500+ live installations across 25+ cities — monitored 24×7 from our central NOC."
+              sub="500+ live installations across 25+ States — monitored 24×7 from our central NOC."
             />
             <div className="mt-8 grid grid-cols-2 gap-4">
               {[
                 { v: "500+", l: "Active sites" },
-                { v: "25+", l: "Cities served" },
+                { v: "25+", l: "States served" },
                 { v: "98%", l: "Uptime SLA" },
                 { v: "24×7", l: "NOC support" },
               ].map((s) => (
@@ -320,7 +320,7 @@ const projects = [
   },
   {
     title: "Pan-India SCADA NOC",
-    metric: "120+",
+    metric: "2500+",
     metricLabel: "Sites Monitored",
     timeline: "Live",
     tech: "SCADA · Cloud",

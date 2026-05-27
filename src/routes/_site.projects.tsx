@@ -20,7 +20,7 @@ function ProjectsPage() {
       <PageHero
         eyebrow="Projects"
         title={<>Case studies in <span className="text-gradient">engineered impact</span></>}
-        sub="500+ deployments across India — from rooftop solar to fully-automated production lines."
+        sub="5000+ deployments across India — from rooftop solar to fully-automated production lines."
       />
       <IndiaMap />
       <FeaturedProjects />

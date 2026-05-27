@@ -22,6 +22,7 @@ import pccPanel from "@/assets/pcc_ia.jpg";
 import plcPanel from "@/assets/plc_ia.jpg";
 import scadaGpt from "@/assets/scada_gpt.jpeg";
 import scadaReal from "@/assets/scada_real.jpg";
+import rssIot from "@/assets/rss-iot.jpeg";
 import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
 import zeroExpertDgPv from "@/assets/zero_expert_dgpv.png";
 
@@ -137,6 +138,13 @@ export const solutions = [
       "Cloud dashboards for equipment, energy, environment, and production KPIs",
       "Alerting, trend analysis, anomaly detection, and maintenance triggers",
       "API-ready data pipelines for ERP, MES, and reporting systems",
+    ],
+    images: [
+      {
+        src: rssIot,
+        alt: "IoT Monitoring Dashboard and Analytics",
+        title: "IoT Monitoring System",
+      },
     ],
     outcomes: ["Remote insight", "Less unplanned downtime", "Data-led maintenance"],
   },
