@@ -152,22 +152,22 @@ export const solutions = [
       {
         src: rssIot1,
         alt: "IoT monitoring device and interface",
-        title: "IoT Monitoring Unit",
+        title: "Unified Platform for All Sites",
       },
       {
         src: rssIot2,
         alt: "IoT monitoring dashboard",
-        title: "Cloud Analytics",
+        title: "Simple and Effective Dashboard",
       },
       {
         src: rssIot3,
         alt: "IoT gateway and sensors",
-        title: "Edge Gateway",
+        title: "MPPT Monitoring",
       },
       {
         src: rssIot4,
         alt: "IoT real-time data monitoring",
-        title: "Real-time Telemetry",
+        title: "Daily Power Generation",
       },
     ],
     outcomes: ["Remote insight", "Less unplanned downtime", "Data-led maintenance"],
