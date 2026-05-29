@@ -14,6 +14,7 @@ import batteryPanelBos from "@/assets/battery_panel_bos.jpg";
 import bosGpt from "@/assets/bos_gpt.jpeg";
 import controlDeskPanel from "@/assets/control_desk_ia.jpg";
 import dgGpt from "@/assets/dg_gpt.jpeg";
+import dgSyncPf from "@/assets/dg_syncpf.jpeg";
 import disconnectBoxesBos from "@/assets/disconnect_boxes_bos.jpg";
 import ltGpt from "@/assets/lt_gpt.jpeg";
 import ltPanel from "@/assets/lt_panel_ia.jpg";
@@ -28,7 +29,21 @@ import rssIot2 from "@/assets/rss-iot2.jpeg";
 import rssIot3 from "@/assets/rss-iot3.jpeg";
 import rssIot4 from "@/assets/rss-iot4.jpeg";
 import variableFrequencyPanel from "@/assets/variable_freq_panel_ia.jpg";
+import zeroExpertDevice from "@/assets/zero_expert_device.jpeg";
 import zeroExpertDgPv from "@/assets/zero_expert_dgpv.png";
+
+const zeroExpertDownloads = [
+  {
+    label: "Download Architecture",
+    href: "https://rssindiacom-my.sharepoint.com/:b:/g/personal/ak_rss-india_com/IQDfZewU_TLORI5sNeEHnCubAd_LLL8PjmGTF2hNfdIO_o4?e=ZjcLGY",
+    download: false,
+  },
+  {
+    label: "Download rss-iot Datasheet",
+    href: "https://rssindiacom-my.sharepoint.com/:b:/g/personal/sourabh_rss-india_com/IQDvDl8c3ryFTYdyt27ocGH1AR8zzgoyzJrih3SQb_9-Jo8?e=FFaqN2",
+    download: true,
+  },
+] as const;
 
 export const solutions = [
   {
@@ -229,6 +244,7 @@ export const solutions = [
       {
         label: "ACDB DCDB Datasheet",
         href: "https://rssindiacom-my.sharepoint.com/:b:/g/personal/ak_rss-india_com/IQAXHUsiNiIHQb6OJ4EZazZNARxV48F_iEZDGfhil1r_Oho?e=I0uNoQ",
+        download: true,
       },
     ],
   },
@@ -258,8 +274,14 @@ export const solutions = [
         alt: "DG synchronization panel",
         title: "DG Synchronization",
       },
+      {
+        src: dgSyncPf,
+        alt: "DG synchronization panel with power factor control",
+        title: "DG Synchronization PF",
+      },
     ],
     outcomes: ["Stable backup power", "Optimized generator loading", "Reduced operator intervention"],
+    downloads: zeroExpertDownloads,
   },
   {
     slug: "zero-export-devices",
@@ -276,7 +298,15 @@ export const solutions = [
       "Testing, utility coordination support, and compliance documentation",
       "Integration with monitoring dashboards and energy management systems",
     ],
+    images: [
+      {
+        src: zeroExpertDevice,
+        alt: "Zero Expert Device controller",
+        title: "Zero Expert Device",
+      },
+    ],
     outcomes: ["Policy compliance", "Better solar utilization", "Reduced export risk"],
+    downloads: zeroExpertDownloads,
   },
 ] as const;
 

@@ -155,7 +155,7 @@ function SolutionDetailPage() {
                     href={download.href}
                     target="_blank"
                     rel="noreferrer"
-                    download
+                    download={download.download ? true : undefined}
                     className="btn-ghost w-full justify-center"
                   >
                     <Download className="h-4 w-4" /> {download.label}
