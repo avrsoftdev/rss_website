@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowLeft, ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ArrowRight, CheckCircle2, Download } from "lucide-react";
 import { PageHero } from "@/components/site/PageHero";
 import { FinalCTA } from "@/components/site/Sections";
 import { getSolutionBySlug } from "@/lib/solutions";
@@ -147,6 +147,22 @@ function SolutionDetailPage() {
             <Link to="/contact" className="btn-primary mt-7 w-full">
               Discuss your scope <ArrowRight className="h-4 w-4" />
             </Link>
+            {"downloads" in solution && (
+              <div className="mt-3 space-y-3">
+                {solution.downloads.map((download) => (
+                  <a
+                    key={download.label}
+                    href={download.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    download
+                    className="btn-ghost w-full justify-center"
+                  >
+                    <Download className="h-4 w-4" /> {download.label}
+                  </a>
+                ))}
+              </div>
+            )}
             <Link to="/solutions" className="btn-ghost mt-3 w-full justify-center">
               <ArrowLeft className="h-4 w-4" /> All solutions
             </Link>

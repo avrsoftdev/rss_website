@@ -225,6 +225,12 @@ export const solutions = [
       "Array Junction Boxes",
     ],
     outcomes: ["Safer power distribution", "Cleaner maintenance", "Built-to-site reliability"],
+    downloads: [
+      {
+        label: "ACDB DCDB Datasheet",
+        href: "https://rssindiacom-my.sharepoint.com/:b:/g/personal/ak_rss-india_com/IQAXHUsiNiIHQb6OJ4EZazZNARxV48F_iEZDGfhil1r_Oho?e=I0uNoQ",
+      },
+    ],
   },
   {
     slug: "dg-synchronization",
