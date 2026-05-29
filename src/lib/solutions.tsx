@@ -302,7 +302,7 @@ export const solutions = [
       {
         src: zeroExpertDevice,
         alt: "Zero Expert Device controller",
-        title: "Zero Expert Device",
+        title: "Zero Export Device",
       },
     ],
     outcomes: ["Policy compliance", "Better solar utilization", "Reduced export risk"],
