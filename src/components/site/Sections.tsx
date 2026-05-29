@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import {
-  Sun, Cpu, Activity, Wifi, BatteryCharging, Cog, Gauge, Workflow, ShieldCheck,
+  Sun, Cpu, Activity, Wifi, BatteryCharging, Cog, Gauge, Workflow, ShieldCheck, Power,
   Building2, Warehouse, Factory, Zap, Network, Radio, Cloud, Brain, Layers,
   Headphones, Rocket, Wrench, ArrowRight, Star, Quote, MapPin,
   Trees,
@@ -91,13 +91,14 @@ export function TrustedStrip() {
 
 /* ---------- Solutions Showcase ---------- */
 const solutions = [
+  { icon: Power, title: "DG Synchronization", desc: "Multi-DG sync, grid paralleling, and automatic load sharing.", tag: "Sync", slug: "dg-synchronization" },
+  { icon: ShieldCheck, title: "Zero Expert Device", desc: "Compliant zero-export control for solar, DG, and grid-connected sites.", tag: "ZE", slug: "zero-export-devices" },
   { icon: Sun, title: "Solar EPC", desc: "Utility-scale design, engineering, procurement, commissioning.", tag: "120MW+", slug: "solar-epc-solutions" },
   { icon: BatteryCharging, title: "Solar BOS", desc: "Combiner boxes, disconnects, wiring, inverter and battery connection panels.", tag: "BOS", slug: "solar-bos-balance-of-system" },
   { icon: Activity, title: "SCADA Systems", desc: "Distributed real-time supervisory control with secure architectures.", tag: "24×7", slug: "scada-systems" },
   { icon: Cog, title: "Industrial Automation", desc: "PLC, HMI and robotics for the modern smart factory.", tag: "300+", slug: "industrial-automation" },
   { icon: Wifi, title: "IoT Monitoring", desc: "Edge-to-cloud telemetry, AI anomaly detection, predictive maintenance.", tag: "1.2M/day", slug: "iot-monitoring" },
   { icon: BatteryCharging, title: "Energy Management System", desc: "Real-time energy analytics, intelligent load optimization, consumption monitoring.", tag: "180+", slug: "smart-energy-solutions" },
-  { icon: Gauge, title: "Smart Energy Monitoring", desc: "Net-metering, zero-export devices, energy optimisation.", tag: "Live", slug: "zero-export-devices" },
 ];
 
 export function SolutionsShowcase() {
