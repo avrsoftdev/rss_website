@@ -1,6 +1,7 @@
 import {
   Activity,
   BatteryCharging,
+  CircuitBoard,
   Cog,
   Cpu,
   Gauge,
@@ -85,6 +86,25 @@ export const solutions = [
       { src: bosGpt, alt: "Solar BOS system", title: "Solar BOS" },
     ],
     outcomes: ["Safer plant wiring", "Reliable system protection", "Cleaner inverter integration"],
+  },
+  {
+    slug: "string-monitoring-boxes",
+    icon: CircuitBoard,
+    title: "String Monitoring Boxes",
+    shortTitle: "SMB",
+    desc: "Solar string current, DC voltage, protection, and SCADA-ready monitoring for PV plants.",
+    tag: "SMB",
+    intro:
+      "String Monitoring Boxes for solar PV plants, built to monitor individual string performance, detect faults early, and improve plant reliability.",
+    highlights: [
+      "Individual solar string current monitoring for performance comparison",
+      "Fault detection for string failure, low generation, and open circuits",
+      "DC bus voltage, internal temperature, SPD health, fuse status, and optional door status monitoring",
+      "Integrated string fuses, DC isolator, surge protection device, current sensors, DAU, and power supply",
+      "SCADA, data logger, and monitoring system communication through Modbus RTU over RS-485",
+      "Architecture support from solar module strings to SMB, DC combiner or inverter, and central monitoring",
+    ],
+    outcomes: ["Early fault detection", "Reduced maintenance time", "Improved PV plant performance"],
   },
   {
     slug: "industrial-automation",
