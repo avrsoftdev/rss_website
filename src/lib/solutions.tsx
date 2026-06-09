@@ -104,6 +104,13 @@ export const solutions = [
       "SCADA, data logger, and monitoring system communication through Modbus RTU over RS-485",
       "Architecture support from solar module strings to SMB, DC combiner or inverter, and central monitoring",
     ],
+    images: [
+      {
+        src: scadaReal,
+        alt: "SCADA real-time string monitoring interface",
+        title: "String Monitoring SCADA",
+      },
+    ],
     outcomes: ["Early fault detection", "Reduced maintenance time", "Improved PV plant performance"],
   },
   {
